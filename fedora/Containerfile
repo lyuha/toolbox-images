@@ -1,17 +1,23 @@
 FROM registry.fedoraproject.org/fedora-toolbox:36
 
-RUN sudo dnf copr enable atim/bottom -y 
-RUN # --mount=type=cache,target=/var/cache/dnf \
-    sudo dnf install -y -v \
+RUN dnf copr enable atim/bottom -y 
+RUN dnf install -y \
     bat \
     ripgrep \
-    neovim \
     fish \
     git \
     starship \
     lsd \
-    exa fd-find \
+    exa \
+    fd-find \
     git-delta \
     htop \
-    bottom
+    bottom \
+    zoxide
+
+RUN dnf install -y \
+    neovim \
+    emacs-nox \
+    kakoune \
+    micro \
 
