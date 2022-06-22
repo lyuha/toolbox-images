@@ -7,12 +7,15 @@ RUN dnf install -y \
     fish \
     git \
     starship \
+    dua-cli \
     lsd \
     exa \
     fd-find \
     git-delta \
     htop \
     bottom \
+    sd \
+    skim \
     zoxide
 
 RUN dnf install -y \
@@ -20,4 +23,5 @@ RUN dnf install -y \
     emacs-nox \
     kakoune \
     micro \
+    helix
 
